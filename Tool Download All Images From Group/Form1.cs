@@ -25,6 +25,8 @@ namespace Tool_Download_All_Images_From_Group
 
             TextBox.CheckForIllegalCrossThreadCalls = false;
             Button.CheckForIllegalCrossThreadCalls = false;
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
         bool isStop = false;
         Random rand = new Random();
